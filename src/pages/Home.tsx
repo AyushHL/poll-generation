@@ -54,7 +54,11 @@ const Home: React.FC = () => {
       </section>
 
       <footer className="footer">
-        <p>Privacy Policy | Terms of Service | Contact Support</p>
+        <p>
+            <Link to="/privacy-policy">Privacy Policy</Link> |{" "}
+            <Link to="/terms-of-service">Terms of Service</Link> |{" "}
+            <Link to="/contact">Contact Support</Link>
+        </p>
       </footer>
     </div>
   );
