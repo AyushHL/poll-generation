@@ -58,8 +58,7 @@ const Register: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             style={{
-              ...inputStyle,
-              paddingRight: '60px',
+              ...inputWithToggleStyle,
               borderColor: password && isPasswordWeak(password) ? 'orange' : '#ccc'
             }}
           />
@@ -80,8 +79,7 @@ const Register: React.FC = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
             placeholder="Confirm Password"
             style={{
-              ...inputStyle,
-              paddingRight: '60px',
+              ...inputWithToggleStyle,
               borderColor: isConfirmMismatch ? 'red' : '#ccc'
             }}
           />
@@ -162,18 +160,24 @@ const inputStyle: React.CSSProperties = {
 
 const passwordWrapper: React.CSSProperties = {
   position: 'relative',
-  marginBottom: '14px'
+  marginBottom: '14px',
+  display: 'flex',
+  alignItems: 'center'
+};
+
+const inputWithToggleStyle: React.CSSProperties = {
+  ...inputStyle,
+  marginBottom: 0,
+  flex: 1,
+  paddingRight: '60px'
 };
 
 const eyeStyle: React.CSSProperties = {
-  position: 'absolute',
-  right: '14px',
-  top: '50%',
-  transform: 'translateY(-50%)',
-  cursor: 'pointer',
+  marginLeft: '-55px',
   fontSize: '13px',
   fontWeight: 'bold',
   color: '#4f03ff',
+  cursor: 'pointer',
   userSelect: 'none'
 };
 
