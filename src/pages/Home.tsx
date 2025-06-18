@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/home.css'; // use your styles directory
+import '../styles/home.css';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
@@ -16,7 +16,7 @@ const Home: React.FC = () => {
 
       <section className="hero">
         <h2>Welcome to Poll Automation</h2>
-        <p>Experience the best features tailored for you. Join us today and revolutionize real-time student engagement!</p>
+        <p>Experience the best features tailored for you. Join us today and revolutionize real-time audience engagement!</p>
         <div className="buttons">
           <Link to="/signup" className="btn btn-primary">Sign Up</Link>
           <Link to="/login" className="btn btn-outline">Login</Link>
